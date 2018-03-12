@@ -13,5 +13,6 @@
   },
   "dependencies": {
     "mws-api": "github:krosk93/mws-api"
-  }
+  },
+  "repository": "github:krosk93/node-red-contrib-mws"
 }
