@@ -1,0 +1,17 @@
+{
+  "name": "node-red-contrib-mws",
+  "version": "0.0.1",
+  "description": "Node to connect to Amazon MWS",
+  "main": "mws.js",
+  "author": "Oscar Rovira",
+  "license": "MIT",
+  "node-red": {
+    "nodes": {
+      "mws": "mws.js",
+      "mws-config": "mws-config.js"
+    }
+  },
+  "dependencies": {
+    "mws-api": "github:krosk93/mws-api"
+  }
+}

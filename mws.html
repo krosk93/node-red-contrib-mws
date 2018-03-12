@@ -1,0 +1,50 @@
+<script type="text/javascript">
+  RED.nodes.registerType('MWS', {
+    category: 'function',
+    color: '#ffc266',
+    defaults: {
+      name: {
+        value: ""
+      },
+      account: {
+        value: "",
+        type: "mws-config"
+      },
+      action: {
+        value: "GetMatchingProductForId"
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "amazon.png",
+    label: function() {
+      return this.name || "Amazon MWS"
+    }
+  })
+</script>
+
+<script type="text/x-red" data-template-name="MWS">
+  <div class="form-row">
+    <label for="node-input-account"><i class="icon-tag"></i> MWS Credentials</label>
+    <input type="text" id="node-input-account" placeholder="Account">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-action"><i class="icon-tag"></i> Action</label>
+    <select id="node-input-action" placeholder="Action">
+      <option value="FulfillmentInboundShipment.GetPrepInstructionsForASIN">FulfillmentInboundShipment.GetPrepInstructionsForASIN</option>
+      <option value="Products.GetMatchingProductForId">Products.GetMatchingProductForId</option>
+      <option value="Products.GetCompetitivePricingForASIN">Products.GetCompetitivePricingForASIN</option>
+      <option value="Products.GetLowestOfferListingsForASIN">Products.GetLowestOfferListingsForASIN</option>
+      <option value="Products.GetLowestPricedOffersForASIN">Products.GetLowestPricedOffersForASIN</option>
+      <option value="Products.GetMyFeesEstimate">Products.GetMyFeesEstimate</option>
+    </select>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="MWS">
+  <p>A simple node for connecting to MWS</p>
+</script>

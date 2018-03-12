@@ -1,0 +1,48 @@
+<script type="text/javascript">
+  RED.nodes.registerType('mws-config', {
+    category: 'config',
+    defaults: {
+      accessKeyId: {
+        value: "",
+        required: true,
+      },
+      secretAccessKey: {
+        value: "",
+        required: true,
+      },
+      merchantId: {
+        value: "",
+        required: true,
+      },
+      host: {
+        value: ""
+      }
+    },
+    label: function() {
+      return this.merchantId || "Amazon MWS"
+    }
+  })
+</script>
+
+<script type="text/x-red" data-template-name="mws-config">
+  <div class="form-row">
+    <label for="node-config-input-merchantId"><i class="icon-tag"></i> Merchant ID</label>
+    <input type="text" id="node-config-input-merchantId" placeholder="Merchant Id">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-accessKeyId"><i class="icon-tag"></i> Access Key</label>
+    <input type="text" id="node-config-input-accessKeyId" placeholder="Access Key Id">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-secretAccessKey"><i class="icon-tag"></i> AWS Secret</label>
+    <input type="text" id="node-config-input-secretAccessKey" placeholder="AWS Secret">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-host"><i class="icon-tag"></i> Host</label>
+    <input type="text" id="node-config-input-host" placeholder="mws.amazonservices.com">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="mws-config">
+  <p>A simple node for connecting to MWS</p>
+</script>
